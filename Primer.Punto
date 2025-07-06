@@ -1,0 +1,20 @@
+def calcular_promedio(lista_reales):
+    """
+    Calcula el promedio de los elementos de una lista de números reales.
+
+    Parámetro:
+    - lista_reales: Lista de números reales (floats)
+
+    Retorna:
+    - El promedio (float)
+    """
+    if len(lista_reales) == 0:
+        return 0  # Evita división por cero
+    suma = sum(lista_reales)
+    promedio = suma / len(lista_reales)
+    return promedio
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    datos = [3.5, 4.2, 5.0, 2.8, 6.1]
+    print(f"El promedio del arreglo es: {calcular_promedio(datos)}")
