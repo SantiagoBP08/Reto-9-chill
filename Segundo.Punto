@@ -1,1 +1,33 @@
+def producto_punto(v1, v2):
+"""
+Calcula el producto punto entre dos listas del mismo tamaño.
+"""
+if len(v1) != len(v2):
+    print("Error: Los vectores deben tener el mismo tamaño.")
+    return None
 
+resultado = 0
+for i in range(len(v1)):
+    resultado += v1[i] * v2[i]
+return resultado
+
+
+# Ejemplo interactivo (con input del usuario)
+if __name__ == "__main__":
+    n = int(input("Ingrese la cantidad de elementos de los vectores: "))
+
+    vector1 = []
+    vector2 = []
+
+    print("\nIngrese los elementos del primer vector:")
+    for i in range(n):
+        num = float(input(f"Elemento {i+1}: "))
+        vector1.append(num)
+
+    print("\nIngrese los elementos del segundo vector:")
+    for i in range(n):
+        num = float(input(f"Elemento {i+1}: "))
+        vector2.append(num)
+
+    resultado = producto_punto(vector1, vector2)
+    print(f"\nEl producto punto de los vectores es: {resultado}")
